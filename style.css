@@ -46,6 +46,7 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   font-family: "Barlow Semi Condensed", sans-serif;
+  background: hsl(var(--lGrayishBlue));
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -76,11 +77,12 @@ picture {
 
 /* utility classes */
 .bg-1 {
-  background: hsl(var(--violet)) url(./images/bg-pattern-quotation.svg) top right 10% no-repeat;
+  background: hsl(var(--violet)) url(./images/bg-pattern-quotation.svg) top
+    right 10% no-repeat;
 }
 
-.bg-1 .author-pic{
-    outline: 2px solid hsl(var(--white), 0.5);
+.bg-1 .author-pic {
+  outline: 2px solid hsl(var(--white), 0.5);
 }
 
 .bg-2 {
@@ -103,8 +105,8 @@ picture {
   background: hsl(var(--vdBlackishBlue));
 }
 
-.bg-4 .author-pic{
-    border: 2px solid hsl(var(--violet), 0.5);
+.bg-4 .author-pic {
+  border: 2px solid hsl(var(--violet), 0.5);
 }
 
 /* main */
@@ -123,24 +125,24 @@ main {
   row-gap: 1rem;
 }
 
-.author{
-    display: flex;
-    align-items: center;
-    gap: 0 1rem;
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
 }
 
-.author-pic{
-    width: 2rem;
-    border-radius: 50%;
+.author-pic {
+  width: 2rem;
+  border-radius: 50%;
 }
 
-.name{
-    font-size: var(--fs-14);
-    font-weight: 500;
+.name {
+  font-size: var(--fs-14);
+  font-weight: 500;
 }
 
-p:is(.review, .status){
-    font-size: var(--fs-13);
+p:is(.review, .status) {
+  font-size: var(--fs-13);
 }
 
 .status,
@@ -148,9 +150,9 @@ p:is(.review, .status){
   color: hsl(var(--white), 0.5);
 }
 
-.testimony{
-    font-size: var(--fs-20);
-    line-height: 1.1;
+.testimony {
+  font-size: var(--fs-20);
+  line-height: 1.1;
 }
 
 /* footer */
