@@ -14,6 +14,7 @@
   /* font sizes */
   --fs-10: 0.625rem;
   --fs-12: 0.75rem;
+  --fs-13: 0.8125rem;
   --fs-14: 0.875rem;
   --fs-16: 1rem;
   --fs-18: 1.125rem;
@@ -44,6 +45,7 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 /* Set shorter line heights on headings and interactive elements */
@@ -73,13 +75,89 @@ picture {
 }
 
 /* utility classes */
+.bg-1 {
+  background: hsl(var(--violet)) url(./images/bg-pattern-quotation.svg) top right 10% no-repeat;
+}
+
+.bg-1 .author-pic{
+    outline: 2px solid hsl(var(--white), 0.5);
+}
+
+.bg-2 {
+  background: hsl(var(--vdGrayishBlue));
+}
+
+.bg-3 {
+  background: hsl(var(--white));
+}
+
+.bg-3 :is(.status, .review) {
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.bg-3 :not(.status, .review) {
+  color: hsl(var(--vdGrayishBlue));
+}
+
+.bg-4 {
+  background: hsl(var(--vdBlackishBlue));
+}
+
+.bg-4 .author-pic{
+    border: 2px solid hsl(var(--violet), 0.5);
+}
 
 /* main */
+main {
+  width: 85vw;
+  max-width: 1440px;
+  margin: 4rem auto;
+}
+
+.testimonial {
+  padding: var(--fs-30);
+  color: hsl(var(--white));
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  display: grid;
+  row-gap: 1rem;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.author-pic{
+    width: 2rem;
+    border-radius: 50%;
+}
+
+.name{
+    font-size: var(--fs-14);
+    font-weight: 500;
+}
+
+p:is(.review, .status){
+    font-size: var(--fs-13);
+}
+
+.status,
+.review {
+  color: hsl(var(--white), 0.5);
+}
+
+.testimony{
+    font-size: var(--fs-20);
+    line-height: 1.1;
+}
 
 /* footer */
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: none;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
